@@ -9,10 +9,9 @@ import Foundation
 import CoreBluetooth
 
 protocol DataArrayDelegate: AnyObject {
-    func updateTempArray(_ temp: Double)
+    
     func updateBreathArray(_ breath: Double)
-    func updateHeartArray(_ heart: Double)
-    func updateHeartBeatArray(_ heartBeat: Int)
+    
 }
 
 class HeartBlueTooth: NSObject, CBCentralManagerDelegate, CBPeripheralDelegate {
@@ -129,20 +128,6 @@ class HeartBlueTooth: NSObject, CBCentralManagerDelegate, CBPeripheralDelegate {
                 if let data = characteristic.value {
                     let array = [UInt8](data)
                     
-                    // 第三位 要 * 0.1
-                    var temp = Double(0)
-                    var tempArr = [Double]()
-                    for i in 0...2{
-                        tempArr.append(Double(array[i]))
-                    }
-                    
-                    temp = tempArr[0] + tempArr[1] + (tempArr[2] * 0.1)
-                    
-    //                tempDataArray.append(temp)
-                    dataArrayDelegate?.updateTempArray(temp)
-    //                print("溫度")
-    //                print(array)
-    //                print(tempDataArray)
                 }
             }
             
@@ -153,7 +138,6 @@ class HeartBlueTooth: NSObject, CBCentralManagerDelegate, CBPeripheralDelegate {
                     
                     
                     
-                    var heart = Double(0)
                     var breath = Double(0)
                     var breathArr = [Double]()
                     
@@ -171,31 +155,6 @@ class HeartBlueTooth: NSObject, CBCentralManagerDelegate, CBPeripheralDelegate {
     //                breathDataArray.append(breath)
                     self.dataArrayDelegate?.updateBreathArray(breath)
                     
-                    // 第一位 * 256
-                    var heartArr = [Double]()
-                    
-                    for i in 6...7{
-                        heartArr.append(Double(array[i]))
-                    }
-                    
-                    heart = (heartArr[0] * 256 + heartArr[1]) / 10
-                    
-                    self.dataArrayDelegate?.updateHeartArray(heart)
-                    
-                    
-                    if heart < 16 {
-                        self.dataArrayDelegate?.updateHeartBeatArray(0)
-                    }else{
-                        self.dataArrayDelegate?.updateHeartBeatArray(1)
-                    }
-                    
-    //                heartDataArray.append(heart)
-    //                dataArrayDelegate?.updateHeartArray(heart)
-                    
-                    
-    //                print("呼心")
-    //                print(array)
-    //                print(heartDataArray)
                 }
             }
             

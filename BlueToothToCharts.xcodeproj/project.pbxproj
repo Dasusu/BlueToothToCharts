@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1864D5AA2F184A7BBD36E150 /* Pods_BlueToothToCharts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E95DDA9B12AA5936C44D974 /* Pods_BlueToothToCharts.framework */; };
 		414AE76D2861D47B00DF602B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414AE76C2861D47B00DF602B /* AppDelegate.swift */; };
 		414AE76F2861D47B00DF602B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414AE76E2861D47B00DF602B /* SceneDelegate.swift */; };
 		414AE7712861D47B00DF602B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414AE7702861D47B00DF602B /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0529177108DFCF6C8558D199 /* Pods-BlueToothToCharts.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlueToothToCharts.debug.xcconfig"; path = "Target Support Files/Pods-BlueToothToCharts/Pods-BlueToothToCharts.debug.xcconfig"; sourceTree = "<group>"; };
 		414AE7692861D47B00DF602B /* BlueToothToCharts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlueToothToCharts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		414AE76C2861D47B00DF602B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		414AE76E2861D47B00DF602B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +26,8 @@
 		414AE7782861D47D00DF602B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		414AE77A2861D47D00DF602B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		414AE7802861D50E00DF602B /* BlueToothManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueToothManager.swift; sourceTree = "<group>"; };
+		65A384FB4A87F4EB7F45F8A8 /* Pods-BlueToothToCharts.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlueToothToCharts.release.xcconfig"; path = "Target Support Files/Pods-BlueToothToCharts/Pods-BlueToothToCharts.release.xcconfig"; sourceTree = "<group>"; };
+		6E95DDA9B12AA5936C44D974 /* Pods_BlueToothToCharts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BlueToothToCharts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +35,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1864D5AA2F184A7BBD36E150 /* Pods_BlueToothToCharts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1F744419302D4A68B281C193 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6E95DDA9B12AA5936C44D974 /* Pods_BlueToothToCharts.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		414AE7602861D47B00DF602B = {
 			isa = PBXGroup;
 			children = (
 				414AE76B2861D47B00DF602B /* BlueToothToCharts */,
 				414AE76A2861D47B00DF602B /* Products */,
+				5E78194AF9B5048FBC53D3FF /* Pods */,
+				1F744419302D4A68B281C193 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +82,15 @@
 			path = BlueToothToCharts;
 			sourceTree = "<group>";
 		};
+		5E78194AF9B5048FBC53D3FF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0529177108DFCF6C8558D199 /* Pods-BlueToothToCharts.debug.xcconfig */,
+				65A384FB4A87F4EB7F45F8A8 /* Pods-BlueToothToCharts.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +98,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 414AE77D2861D47D00DF602B /* Build configuration list for PBXNativeTarget "BlueToothToCharts" */;
 			buildPhases = (
+				CEF76358985DC750E23D15FA /* [CP] Check Pods Manifest.lock */,
 				414AE7652861D47B00DF602B /* Sources */,
 				414AE7662861D47B00DF602B /* Frameworks */,
 				414AE7672861D47B00DF602B /* Resources */,
+				6689894EB8BBD819E3998EF0 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -131,6 +157,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6689894EB8BBD819E3998EF0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BlueToothToCharts/Pods-BlueToothToCharts-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BlueToothToCharts/Pods-BlueToothToCharts-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BlueToothToCharts/Pods-BlueToothToCharts-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CEF76358985DC750E23D15FA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BlueToothToCharts-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		414AE7652861D47B00DF602B /* Sources */ = {
@@ -274,13 +342,17 @@
 		};
 		414AE77E2861D47D00DF602B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0529177108DFCF6C8558D199 /* Pods-BlueToothToCharts.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PR7UMZ245P;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = BlueToothToCharts/Info.plist;
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "";
+				INFOPLIST_KEY_NSBluetoothPeripheralUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -300,13 +372,17 @@
 		};
 		414AE77F2861D47D00DF602B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 65A384FB4A87F4EB7F45F8A8 /* Pods-BlueToothToCharts.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PR7UMZ245P;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = BlueToothToCharts/Info.plist;
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "";
+				INFOPLIST_KEY_NSBluetoothPeripheralUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
