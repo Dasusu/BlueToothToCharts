@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1864D5AA2F184A7BBD36E150 /* Pods_BlueToothToCharts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E95DDA9B12AA5936C44D974 /* Pods_BlueToothToCharts.framework */; };
-		35F256B12862E38F00552ADB /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F256B02862E38F00552ADB /* Store.swift */; };
+		35F256B32863098300552ADB /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F256B22863098300552ADB /* Store.swift */; };
 		414AE76D2861D47B00DF602B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414AE76C2861D47B00DF602B /* AppDelegate.swift */; };
 		414AE76F2861D47B00DF602B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414AE76E2861D47B00DF602B /* SceneDelegate.swift */; };
 		414AE7712861D47B00DF602B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414AE7702861D47B00DF602B /* ViewController.swift */; };
@@ -19,7 +19,7 @@
 
 /* Begin PBXFileReference section */
 		0529177108DFCF6C8558D199 /* Pods-BlueToothToCharts.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlueToothToCharts.debug.xcconfig"; path = "Target Support Files/Pods-BlueToothToCharts/Pods-BlueToothToCharts.debug.xcconfig"; sourceTree = "<group>"; };
-		35F256B02862E38F00552ADB /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
+		35F256B22863098300552ADB /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 		414AE7692861D47B00DF602B /* BlueToothToCharts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlueToothToCharts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		414AE76C2861D47B00DF602B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		414AE76E2861D47B00DF602B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -80,7 +80,7 @@
 				414AE7752861D47D00DF602B /* Assets.xcassets */,
 				414AE7772861D47D00DF602B /* LaunchScreen.storyboard */,
 				414AE77A2861D47D00DF602B /* Info.plist */,
-				35F256B02862E38F00552ADB /* Store.swift */,
+				35F256B22863098300552ADB /* Store.swift */,
 			);
 			path = BlueToothToCharts;
 			sourceTree = "<group>";
@@ -208,7 +208,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				35F256B12862E38F00552ADB /* Store.swift in Sources */,
+				35F256B32863098300552ADB /* Store.swift in Sources */,
 				414AE7712861D47B00DF602B /* ViewController.swift in Sources */,
 				414AE76D2861D47B00DF602B /* AppDelegate.swift in Sources */,
 				414AE7812861D50E00DF602B /* BlueToothManager.swift in Sources */,

@@ -11,22 +11,21 @@ import Charts
 
 class ViewController: UIViewController {
 
-
+    var store = Store()
     var blueToothManager = HeartBlueTooth()
-//    var timer:Timer?
-    var x:Double = 0
+    var xAxis:Double = 0
     var currentData:[ChartDataEntry] = []{
         didSet{
-            setData()
+            setCharts()
         }
     }
-
     
     //MARK: - properties
     private lazy var liveChart:LineChartView = {
         let chart = LineChartView()
         chart.backgroundColor = .systemRed
-        chart.animate(xAxisDuration: 1.5)
+//        chart.animate(xAxisDuration: 0.1)
+        chart.dragXEnabled = true
         return chart
     }()
     
@@ -35,24 +34,34 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         blueToothManager.dataArrayDelegate = self
-//        timer = Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(fakeData), userInfo: nil, repeats: true)
         configure()
-        setData()
+        setCharts()
     }
     
-    func setData(){
-        let setData = LineChartDataSet(entries: currentData)
+//    override func viewDidDisappear(_ animated: Bool) {
+//        store.timer.invalidate()
+//    }
+    
+    func setCharts(){
+        let setData = LineChartDataSet(entries: store.fakeData)
         setData.drawCirclesEnabled = false
         let data = LineChartData(dataSet: setData)
         data.setDrawValues(false)
         liveChart.data = data
+        if store.fakeData.count > 10{
+            liveChart.setVisibleXRangeMaximum(10)
+            liveChart.moveViewToX(Double(store.fakeData.count))
+        }
     }
     
-    //MARK: - selectors
-//    @objc func fakeData(){
-//        setData()
+//    func updateChart(){
+//        liveChart.notifyDataSetChanged()
+//        if store.fakeData.count > 10{
+//            liveChart.setVisibleXRangeMaximum(10)
+//            liveChart.moveViewToX(Double(store.fakeData.count))
+//        }
 //    }
-    
+
     //MARK: - configure
     func configure(){
         view.addSubview(liveChart)
@@ -67,8 +76,8 @@ class ViewController: UIViewController {
 
 extension ViewController: DataArrayDelegate {
     func updateBreathArray(_ breath: Double) {
-        x += 1
-        currentData.append(ChartDataEntry(x: x, y: breath))
+        xAxis += 1
+        currentData.append(ChartDataEntry(x: xAxis, y: breath))
     }
 
 }
